@@ -1,0 +1,106 @@
+{
+    "shader_datas": [
+        {
+            "contexts": [
+                {
+                    "compare_mode": "less",
+                    "constants": [
+                        {
+                            "link": "_worldViewProjectionMatrix",
+                            "name": "WVP",
+                            "type": "mat4"
+                        },
+                         {
+                            "link": "_normalMatrix",
+                            "name": "N",
+                            "type": "mat3"
+                        },
+                        { 
+							"name": "W", 
+							"type": "mat4", 
+							"link": "_worldMatrix"
+						},
+						{ 
+							"name": "P", 
+							"type": "mat4", 
+							"link": "_projectionMatrix" 
+						},
+						{
+							"name": "V", 
+							"type": "mat4", 
+							"link": "_viewMatrix"
+						},
+                        {
+                            "link": "_posUnpack",
+                            "name": "posUnpack",
+							"type": "float"
+						},
+                        {
+                            "link": "R",
+							"name": "R", 
+							"type": "float" 
+						},
+                        {
+                            "link": "G",
+							"name": "G", 
+							"type": "float" 
+						},
+                        {
+                            "link": "B",
+							"name": "B", 
+							"type": "float" 
+						},
+						{
+                            "link": "metallic",
+							"name": "metallic", 
+							"type" :"float" 
+						},
+						{
+                            "link": "roughness",
+							"name": "roughness", 
+							"type" :"float" 
+						},
+						{
+                            "link": "ao",
+							"name": "ao", 
+							"type" :"float" 
+						},
+						{
+							"link": "_lightColor",
+							"name": "lightCol",
+							"type": "vec3"
+						},
+
+						{
+							"link": "_lightPosition",
+							"name": "lightPos",
+							"type": "vec3"
+						},
+						{
+							"link": "_cameraPosition",
+							"name": "cameraPos",
+							"type": "vec3"
+						}
+                    ],
+                    "cull_mode": "clockwise",
+                    "depth_write": true,
+                    "fragment_shader": "MatPBR.frag",
+                    "name": "mesh",
+                    "texture_units": [],
+                    "vertex_shader": "MatPBR.vert",
+                    "vertex_elements": [
+                        {
+                            "name": "pos",
+                            "data": "short4norm"
+                        },
+                        {
+                            "name": "nor",
+                            "data": "short2norm"
+                        }
+                    ]
+                }
+            ],
+            "name": "MatPBR.json"
+        }
+    ]
+}

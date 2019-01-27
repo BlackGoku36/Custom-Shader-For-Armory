@@ -1,0 +1,90 @@
+{
+	"shader_datas": [
+		{
+			"contexts": [
+				{
+					"compare_mode": "less",
+					"constants":[
+						{
+							"name": "W", 
+							"type": "mat4", 
+							"link": "_worldMatrix"
+						},
+						{
+							"name": "P", 
+							"type": "mat4", 
+							"link": "_projectionMatrix"
+						},
+						{
+							"name": "V", 
+							"type": "mat4", 
+							"link": "_viewMatrix"
+						},
+						{
+							"link": "_lightColor",
+							"name": "lightCol",
+							"type": "vec3"
+						},
+						{
+							"link": "_lightPosition",
+							"name": "lightPos",
+							"type": "vec3"
+						},
+						{
+							"link": "_cameraPosition",
+							"name": "cameraPos",
+							"type": "vec3"
+						},
+                        {
+                            "link": "_posUnpack",
+                            "name": "posUnpack",
+							"type": "float"
+						}
+					],
+					"cull_mode": "clockwise",
+					"depth_write": true,
+					"fragment_shader": "TexPBR.frag",
+					"name": "mesh",
+					"texture_units":[
+						{
+                            "link":"albedo",
+							"name": "albedoMap"
+						},
+						{
+                            "link":"normal",
+							"name": "normalMap"
+						},
+						{
+                            "link":"metalness",
+							"name": "metallicMap"
+						},
+						{
+                            "link":"roughness",
+							"name": "roughnessMap"
+						},
+						{
+                            "link":"ao",
+							"name": "aoMap"
+						}
+					],
+					"vertex_elements":[
+						{
+							"data": "short4norm",
+							"name": "pos"
+						},
+						{ 
+							"data": "short2norm",
+							"name": "nor"
+						},
+						{ 
+							"data": "short2norm",
+							"name": "tex"
+						}
+					],
+					"vertex_shader": "TexPBR.vert"
+				}
+			],
+			"name": "TexPBR.json"
+		}
+	]
+}
